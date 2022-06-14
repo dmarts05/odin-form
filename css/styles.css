@@ -1,5 +1,5 @@
 :root {
-  --bakcground-color: #E5E7EB;
+  --main-bakcground-color: #f6f6f6;
 }
 
 /* General styling */
@@ -8,6 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style-type: none;
   font-family: 'Work Sans', sans-serif;
 }
 
@@ -60,7 +61,7 @@ body {
 }
 
 .logo-wrapper::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -79,7 +80,7 @@ body {
 }
 
 .logo-wrapper h2 {
-  font-size: 3em;
+  font-size: 3rem;
   letter-spacing: 6px;
 }
 
@@ -88,6 +89,89 @@ body {
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--bakcground-color);
+  justify-content: center;
+  align-items: center;
   flex: 1;
+  gap: 36px;
+  background-color: var(--main-bakcground-color);
+}
+
+.main-wrapper p {
+  width: 75%;
+  font-size: clamp(1rem, 2.5vw, 2.25rem);
+}
+
+.main-wrapper span {
+  align-self: flex-start;
+  padding-left: calc(25% / 2);
+}
+
+.main-wrapper span  a{
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.25s;
+}
+
+.main-wrapper span a:hover {
+  color: #4d4d4d;
+}
+
+/* Form Styling */
+
+form {
+  width: 100%;
+  padding: 0 calc(25% / 2);
+}
+
+form div {
+  position: relative;
+  width: 100%;
+  padding: 28px 0;
+}
+
+form div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% / 6);
+  width: calc(100% + calc(100% / 3));
+  height: 100%;
+  background-color: white;
+  box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.1);
+}
+
+form div * {
+  position: relative;
+}
+
+form div h2 {
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 2.25rem);
+  margin-bottom: 16px;
+}
+
+form div ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+form button {
+  font-size: 1.25rem;
+  padding: 12px 24px;
+  margin-top: 32px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+form button:hover {
+  color: black;
+  background-color: white;
 }
