@@ -30,7 +30,7 @@ button, input, select, textarea {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  width: max(30%, 400px);
+  width: max(30%, 300px);
   flex-shrink: 0;
 }
 
