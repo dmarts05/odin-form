@@ -1,5 +1,5 @@
 :root {
-  --main-bakcground-color: #f6f6f6;
+  --main-background-color: #f6f6f6;
 }
 
 /* General styling */
@@ -15,6 +15,11 @@
 body {
   display: flex;
   height: 100vh;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
 }
 
 /* Aside styling */
@@ -93,7 +98,7 @@ body {
   align-items: center;
   flex: 1;
   gap: 36px;
-  background-color: var(--main-bakcground-color);
+  background-color: var(--main-background-color);
 }
 
 .main-wrapper p {
@@ -156,6 +161,38 @@ form div ul {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  width: 75%;
+}
+
+form div li {
+  width: 48%;
+}
+
+form div label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+form input {
+  padding: 4px 0 4px 4px;
+  background-color: #fcfcfc;
+  border: 2px solid #d9d9d9;
+  border-radius: 6px;
+  transition: all 0.25s;
+}
+
+form input:focus {
+  outline: none;
+  border: 2px solid black;
+  box-shadow: rgba(100, 100, 111, 0.15) 0px 7px 29px 0px;
+}
+
+form input:invalid:focus {
+  border: 2px solid #cc0000;
+}
+
+form input.error {
+  border: 2px solid #cc0000;
 }
 
 form button {
